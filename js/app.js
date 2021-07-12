@@ -119,43 +119,43 @@ CookiesShope.prototype.render=function() {
   // console.log(Dubai.coustomerNumPerhour);
   // console.log(Paris.coustomerNumPerhour);
   // console.log(Lima.coustomerNumPerhour);
-  let Totalpercel=0;
-  let totalPercel=[];
-  function calcTotalPerHour(){
-    for (let i= 0; i < headings.length; i++) {  
-      for (let j = 0; j < shops.length ; j++) {
-        Totalpercel += shops[j].coustomerNumPerhourr[i];
+  // let Totalpercel=0;
+  // let totalPercel=[];
+  // function calcTotalPerHour(){
+  //   for (let i= 0; i < headings.length; i++) {  
+  //     for (let j = 0; j < shops.length ; j++) {
+  //       Totalpercel += shops[j].coustomerNumPerhourr[i];
   
   
      
-    if(i===14){
-     sum+=Totalpercel; }
-  }
-    totalPercel.push(Totalpercel);
-    if(j===4){totalPercel.push(sum);}
-    Totalpercel=0;  
-    }
+  //   if(i===14){
+  //    sum+=Totalpercel; }
+  // }
+  //   totalPercel.push(Totalpercel);
+  //   if(j===4){totalPercel.push(sum);}
+  //   Totalpercel=0;  
+  //   }
     
    
-  }
+  // }
 
-  calcTotalPerHour();
-  console.log(totalPercel);
+  // calcTotalPerHour();
+  // console.log(totalPercel);
 
 
   
 // // footer of the table
-function footer(){
-   let totalrow=document.createElement('tr');
-   for (let i = 0; i < totalPercel.length; i++) {
-     // make th element
-     let thElement=document.createElement('th');
+// function footer(){
+//    let totalrow=document.createElement('tr');
+//    for (let i = 0; i < totalPercel.length; i++) {
+//      // make th element
+//      let thElement=document.createElement('th');
  
-     // append
-     totalrow.appendChild(thElement);
+//      // append
+//      totalrow.appendChild(thElement);
  
-     // text conent
-     thElement.textContent=totalPercel[i];
-    }
-}
-footer();
+//      // text conent
+//      thElement.textContent=totalPercel[i];
+//     }
+// }
+// footer();
