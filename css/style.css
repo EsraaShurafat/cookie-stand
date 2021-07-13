@@ -1,9 +1,41 @@
 * {
-    font-family: Arial, sans-serif;
+  color: #F1ECC3;
+    font-family: Arial;
+   
   }
   
+  body {
+    background-color: #515E63;
+  }
   
+nav {
+  background-color:#57837B;
+}
+
+nav ul li {
+  
+  display: inline-block;
+  margin-left: 25px;
+  margin-right: 25px;
+ 
+}
+
+nav ul li a {
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+}
   td,th{
     border: 1px solid black;
     border-collapse: collapse;
   }
+
+  h1 {
+    text-align: center;
+  }
+
+  
+
+  
