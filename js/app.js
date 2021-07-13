@@ -9,7 +9,7 @@ function randomNum(min, max) {
 
 
 let shops=[];
-let sum=0;
+
 
 
 function CookiesShope (location,minCustmoer,maxCustmoer,avgCookies){
@@ -114,48 +114,51 @@ CookiesShope.prototype.render=function() {
 
   }
    
-  console.log(shops[0].coustomerNumPerhour[0]);
-  // console.log(Tokyo.coustomerNumPerhour);
-  // console.log(Dubai.coustomerNumPerhour);
-  // console.log(Paris.coustomerNumPerhour);
-  // console.log(Lima.coustomerNumPerhour);
-  // let Totalpercel=0;
-  // let totalPercel=[];
-  // function calcTotalPerHour(){
-  //   for (let i= 0; i < headings.length; i++) {  
-  //     for (let j = 0; j < shops.length ; j++) {
-  //       Totalpercel += shops[j].coustomerNumPerhourr[i];
+  // console.log(shops[0].coustomerNumPerhour[0]);
   
+  function footer(){
+    let headingRow=document.createElement('tr');
+    table.appendChild(headingRow);
+    // make th element
+    let thElement=document.createElement('th');
+
+    // append
+    headingRow.appendChild(thElement);
+
+    // text conent
+    thElement.textContent='Totals';
+let totalTotal=0;
+    for (let i = 0; i <hours.length; i++) {
+      let Totalperhour=0;
+      for (let j = 0; j < shops.length; j++) {
+       Totalperhour+=shops[j].coustomerNumPerhour[i];
+      totalTotal+=shops[j].coustomerNumPerhour[i];
+        
+      }
+      let thElement=document.createElement('th');
+
+      // append
+      headingRow.appendChild(thElement);
   
-     
-  //   if(i===14){
-  //    sum+=Totalpercel; }
-  // }
-  //   totalPercel.push(Totalpercel);
-  //   if(j===4){totalPercel.push(sum);}
-  //   Totalpercel=0;  
-  //   }
-    
-   
-  // }
+      // text conent
+      thElement.textContent=Totalperhour;
 
-  // calcTotalPerHour();
-  // console.log(totalPercel);
+      
+
+      
+    }
 
 
-  
-// // footer of the table
-// function footer(){
-//    let totalrow=document.createElement('tr');
-//    for (let i = 0; i < totalPercel.length; i++) {
-//      // make th element
-//      let thElement=document.createElement('th');
- 
-//      // append
-//      totalrow.appendChild(thElement);
- 
-//      // text conent
-//      thElement.textContent=totalPercel[i];
-//     }
-// }
-// footer();
+    let lastthElement=document.createElement('th');
+
+    // append
+    headingRow.appendChild(lastthElement);
+
+    // text conent
+    lastthElement.textContent=totalTotal;
+
+
+
+
+  }
+  footer();
