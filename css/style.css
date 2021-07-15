@@ -6,6 +6,7 @@
   
   body {
     background-color: #515E63;
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRI3jFKYH_Da8QdKas_ZjqQgYsNOqHf6Kqv6gPQy4l1TqKLMpn8PTjTdne3YhE9oTJ2GNM&usqp=CAU');
   }
   
 nav {
@@ -40,4 +41,8 @@ a {
     color: #57837B;
   }
 
+  img {
+    width: 25%;
+  }
+  
   
