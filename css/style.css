@@ -1,19 +1,39 @@
-* {
-  color: #F1ECC3;
-    font-family: Arial;
+body{
+  background-color: #FFDDCC;
+}
+
+
+
+  h1 {
+    color: #99154E;
+    font-size: 65px;
+    font-family: 'Zilla Slab Highlight', cursive;
+    text-align: center;
+  }
    
+  h2 {
+    font-family: Times;
+    color: #FFC93C;
   }
   
-  body {
-    background-color: #515E63;
-    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRI3jFKYH_Da8QdKas_ZjqQgYsNOqHf6Kqv6gPQy4l1TqKLMpn8PTjTdne3YhE9oTJ2GNM&usqp=CAU');
+
+  ol li {
+    
+    font-family: Times;
+    color: #FFC93C;
   }
+  ul li {
+    font-family: Times;
+    color: #FFC93C;
+  }
+ 
   
 nav {
-  background-color:#1b1d1c;
+  background-color:#99154E;
 }
 
 nav ul li {
+  
   
   display: inline-block;
   margin-left: 25px;
@@ -22,20 +42,25 @@ nav ul li {
 }
 
 nav ul li a {
+
   text-decoration: none;
 }
 
 a {
+  color: #FFBBCC;
+  font-family: Times;
   text-decoration: none;
 }
   td,th{
+    background-color: #99154E;
+    color: #FFC93C;
+    font-size: 20px;
+    font-family: Arial;
     border: 1px solid black;
     border-collapse: collapse;
   }
 
-  h1 {
-    text-align: center;
-  }
+  
 
   input {
     color: #57837B;
@@ -45,4 +70,16 @@ a {
     width: 25%;
   }
   
+  div{
+    
+    text-align: center;
+    background-color: #99154E;
+  }
+
+  
+p {
+  font-size: 25px;
+  color: #FFC93C;
+}
+
   
