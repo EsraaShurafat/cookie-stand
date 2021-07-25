@@ -103,26 +103,6 @@ CookiesShope.prototype.render = function () {
 
 
 
-// getting the form from html 
-let form = document.getElementById('form');
-
-// adding the event listener
-form.addEventListener('submit', submitter);
-
-// the submitter fumction
-function submitter(event) {
-  event.preventDefault();
-  console.log(event.target.nameField.value);
-  let location = event.target.nameField.value;
-  let minCustmoer = event.target.minCustmoerNum.value;
-  let maxCustmoer = event.target.maxCustmoerNum.value;
-  let avgCookies = event.target.avgCookies.value;
-let userShop= new CookiesShope(location, minCustmoer, maxCustmoer, avgCookies);
-userShop.calcCustomerNumPerHour();
-userShop.calcDailyTotal();
-userShop.render();
-}
-
 
 function Header() {
   let headingRow = document.createElement('tr');
@@ -198,6 +178,51 @@ function footer() {
 
 }
 footer();
+
+
+
+
+// getting the form from html 
+let form = document.getElementById('form');
+
+// adding the event listener
+form.addEventListener('submit', submitter);
+
+// the submitter fumction
+function submitter(event) {
+  event.preventDefault();
+  console.log(event.target.nameField.value);
+  let location = event.target.nameField.value;
+  let minCustmoer = parseInt(event.target.minCustmoerNum.value);
+  let maxCustmoer =parseInt(event.target.maxCustmoerNum.value);
+  let avgCookies =parseFloat(event.target.avgCookies.value);
+let userShop= new CookiesShope(location, minCustmoer, maxCustmoer, avgCookies);
+console.log(userShop);
+
+table.textContent="";
+
+Header();
+for (let i = 0; i < shops.length; i++) {
+  shops[i].coustomerNumPerhour = [];
+  shops[i].dailyTotalLocation=0;
+  shops[i].calcCustomerNumPerHour();
+  shops[i].calcDailyTotal();
+  shops[i].render();
+}
+footer();
+
+
+
+}
+submitter();
+
+
+
+
+
+
+
+
 
 
 
