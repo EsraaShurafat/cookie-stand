@@ -118,10 +118,10 @@ function submitter(event) {
   let maxCustmoer = event.target.maxCustmoerNum.value;
   let avgCookies = event.target.avgCookies.value;
 let userShop= new CookiesShope(location, minCustmoer, maxCustmoer, avgCookies);
-// userShop.calcCustomerNumPerHour();
-// userShop.calcDailyTotal();
-// userShop.render();
-
+userShop.calcCustomerNumPerHour();
+userShop.calcDailyTotal();
+userShop.render();
+}
 
 
 function Header() {
@@ -206,7 +206,7 @@ footer();
 
 
 
-}
+
 
 
 
